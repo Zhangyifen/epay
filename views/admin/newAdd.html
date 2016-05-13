@@ -1,0 +1,44 @@
+<style id="newAdd" type="text/css">
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"><b>新增新闻</b>
+      </div>
+    </div>
+
+    <div class="panel-body">
+    	<div class="form-group">        	
+        	<div class="alert alert-dismissable" style="display:none;">
+		        <button type="button" class="close">×</button>
+		        <strong class="title"></strong><span class="message"></span>
+		      </div>       	
+        </div>
+         <div class="form-group">
+          <label class="col-md-2 control-label">新闻标题：</label>
+          <div class="col-md-10">
+            <input type="text" required="" placeholder="新闻标题" id="ntitle" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">新闻内容：</label>
+          <div class="col-md-10">
+          	<textarea required="" class="form-control" placeholder="新闻内容" rows="10" cols="30" id="content"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">作者：</label>
+          <div class="col-md-10">
+            <select class="form-control" id="aid">
+	           <% admins.forEach(function(admin){ %>	
+	           		<option value="<%=admin.aid %>"><%=admin.aname%></option>
+	           <% }) %>	           		
+	        </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-info" id="sub">确定</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</style>

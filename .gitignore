@@ -1,0 +1,8 @@
+.idea
+logs
+upfile
+temps
+node_modules
+npm-debug.log
+publish.sh
+*.DS_Store

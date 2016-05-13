@@ -1,0 +1,32 @@
+<style id="typeList" type="text/css">
+	<div class="panel panel-default">
+    <div class="panel-heading">
+    	商品分类列表
+    	<a href="#/typeAdd" class="glyphicon glyphicon-plus pull-right">新增</a>
+    </div>
+	    <table class="table">
+	      <thead>
+	        <tr>
+	          <th>#</th>
+	          <th>分类名称</th>
+	          <th>分类描述</th>
+	          <th>上级分类</th>
+	          <th>操作</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      	<% types.forEach(function(producttype){ %>
+	      		<tr>
+		          <td><%=producttype.tid %></td>
+		          <td><%=producttype.tname %></td>
+		          <td><%=producttype.tinfo %></td>
+		          <td><%=producttype.pname %></td>
+		          <td>		          
+		          	<a href="#/typeDel/<%= producttype.tid %>">删除</a>		          	
+		          </td>
+		        </tr>
+	      	<% }) %>
+	      </tbody>
+	    </table>
+  </div>
+</style>
